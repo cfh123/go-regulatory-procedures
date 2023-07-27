@@ -1,0 +1,51 @@
+[
+  {
+    "sshHost": "sshHost",
+    "sshUser": "sshUser",
+    "sshStatus": 1,
+    "sshPassword": "sshPassword",
+    "sshType": "password",
+    "sshKeyPath": "",
+    "sshPort": 22,
+    "monitors": [
+      {
+        "name": "docker redis 服务",
+        "type": "docker",
+        "status": 1,
+        "findCmd": "docker ps -a|grep redis",
+        "keyword": "Up",
+        "starCmd": "docker restart redis",
+        "fileDir": ""
+      }
+    ]
+  },
+  {
+    "sshHost": "127.0.0.1",
+    "sshUser": "",
+    "sshStatus": 1,
+    "sshPassword": "",
+    "sshType": "local",
+    "sshKeyPath": "",
+    "sshPort": 22,
+    "monitors": [
+      {
+        "name": "普通java服务",
+        "type": "java",
+        "status": 1,
+        "findCmd": "ps -ef|grep test",
+        "keyword": "test.jar",
+        "starCmd": "nohup java -jar /home/test.jar >/dev/null  2>&1 &",
+        "fileDir": "/home/test.jar"
+      },
+      {
+        "name": "docker nginx_server 服务",
+        "type": "docker",
+        "status": 0,
+        "findCmd": "docker ps|grep nginx_server",
+        "keyword": "Up",
+        "starCmd": "docker restart nginx_server",
+        "fileDir": ""
+      }
+    ]
+  }
+]

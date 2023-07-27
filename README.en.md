@@ -59,10 +59,10 @@ htop 直接输入进程数字
 - 设置代理路径
 
 - 方法1 ：cmd -> 打开终端
-输入： go env -w GOPROXY=https://goproxy.cn,direct
+  输入： go env -w GOPROXY=https://goproxy.cn,direct
 
 - 方法2： 如果安装golang
-打开setting -> 选择Go -> Go Modules 回到下图这个界面
-勾选 Enable Go modules integration选项
-输入 -> GOPROXY=https://goproxy.cn  即可
+  打开setting -> 选择Go -> Go Modules 回到下图这个界面
+  勾选 Enable Go modules integration选项
+  输入 -> GOPROXY=https://goproxy.cn  即可
 	
